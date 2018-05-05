@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <v-app>
-      <v-content>
-        <router-view></router-view>
-      </v-content>
+      <navbar />
+        <v-content>
+          <v-container fluid>
+            <router-view></router-view>
+          </v-container>
+        </v-content>
+      <v-footer absoulute></v-footer>
     </v-app>
   </div>
 </template>
@@ -11,6 +15,10 @@
 <script>
 export default {
   name: 'App',
+  components: {
+    'navigation-drawer': () => import('@/components/toolbar/NavigationDrawer'),
+    navbar: () => import('@/components/toolbar/NavBar'),
+  },
 };
 </script>
 

@@ -14,9 +14,9 @@ import router from './router';
 
 Vue.use(Vuetify, {
   theme: {
-    primary: colors.indigo.base,
-    secondary: colors.indigo.darken2,
-    accent: colors.pink.accent2,
+    primary: colors.deepPurple.base, // #673AB7
+    secondary: colors.indigo.darken2, // #303F9F
+    accent: colors.pink.accent2, // #FF4081
   },
 });
 

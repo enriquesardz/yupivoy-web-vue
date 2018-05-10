@@ -3,7 +3,18 @@
       <v-toolbar app dark color="primary">
         <v-toolbar-side-icon
         @click.stop="drawer = !drawer"/>
-        <v-toolbar-title>Yupivoy</v-toolbar-title>
+          <v-toolbar-title>
+            <img height="50" src="@/assets/logo_yupivoy_white_background.png" alt="Yupivoy"/>
+          </v-toolbar-title>
+          <v-spacer />
+          <v-toolbar-items>
+            <v-btn class="hidden-sm-and-down" flat exact small
+            v-for="(route, index) in routes"
+            :key="`${index}_${route.name}`"
+            :to="route.path">
+              {{route.name}}
+            </v-btn>
+          </v-toolbar-items>
       </v-toolbar>
       <!-- <navigation-drawer
         :drawer="drawer"/> -->

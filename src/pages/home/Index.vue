@@ -23,9 +23,23 @@
     </section>
 
     <!-- Purchase now -->
-    <section class="section-container">
+    <section class="section-container" style="background-color:#f3f3f3">
       <v-layout column>
         <h1 class="section-title">Compra ahora</h1>
+        <div id="liquidBoxContainer" style="max-width: 400px; margin:auto;"></div>
+      </v-layout>
+    </section>
+
+    <section class="section-container">
+      <v-layout column>
+          <h1 class="section-title">Cotiza tu viaje en pagos</h1>
+          <v-layout row justify-space-around flex>
+            <div
+            v-for="(num, index) in 3"
+            :key="`${index}`"
+            style="height:350px; width:350px; background-color:pink;">
+            </div>
+          </v-layout>
       </v-layout>
     </section>
   </section>
@@ -50,13 +64,15 @@ export default {
     text-justify: inter-word;
   }
   .section-container {
-    margin-top: 6em;
+    margin-top: 3em;
+    padding: 1.5em;
   }
   .section-title {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 400;
     text-align: center;
     text-justify: inter-word;
+    margin-bottom: 1.5em;
   }
   .layer {
     background-color: rgba(0, 0, 0, 0.104);
